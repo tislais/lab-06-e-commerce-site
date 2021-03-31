@@ -20,7 +20,7 @@ export function createMachineLi(machine) {
 
     const divImage = document.createElement('div');
     divImage.classList.add('machine-image');
-    divImage.style.backgroundImage = `url('${machine.image}')`;
+    divImage.style.backgroundImage = `url(${machine.image})`;
 
     const pType = document.createElement('p');
     pType.textContent = machine.type;
