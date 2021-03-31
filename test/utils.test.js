@@ -1,7 +1,7 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
 
-import { createMachineLi, findById, calcItemTotal } from '../utils.js';
+import { createMachineLi, findById, calcItemTotal, createCartRow } from '../utils.js';
 import { machines } from '../data/machines-data.js';
 import { cart } from '../data/cart-data.js';
 
@@ -40,5 +40,13 @@ test('It should take in an array and an id, and return the first item found that
 test('It should take quantity and an amount and return the total', (expect) => {
     const expected = 450;
     const actual = calcItemTotal(cart[1].quantity, machines[1].price);
+    expect.equal(actual, expected);
+});
+
+test('It should take both a cart line item, and the corresponding product, and return dom that matches your static html example', (expect) => {
+    const expected = `<tr><td class="td-name">Big Game</td><td class="td-months">3 months</td><td class="td-price">600</td></tr>`;
+    
+    const actual = createCartRow(cart[1], machines[9]);
+
     expect.equal(actual, expected);
 });
