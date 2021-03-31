@@ -7,10 +7,40 @@ body {
     background-color: #fff;
     display: flex;
     flex-direction: column;
-    text-align: center;
     padding: 10px;
     box-shadow: 0px 1px 2px #888;
     margin: 10px;
+    border-radius: 10px;
+}
+
+.machine-manu-year {
+    padding: 5px 0;
+}
+
+.machine-manufacturer {
+    margin-left: 5px;
+    font-style: italic;
+}
+
+.machine-year {
+    font-style: italic;
+}
+
+.machine-image {
+    height: 140px;
+    background-size: cover;
+}
+
+.machine-description {
+    height: 80px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: .8rem;
+}
+
+.machine-price {
+    font-size: 1.3rem;
+    text-align: center;
 }
 
 p {
@@ -18,11 +48,24 @@ p {
 }
 
 h3 {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border-bottom: solid 1px #ddd;
+    padding: 5px;
 }
 
 #machines-ul {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+button {
+    padding: 10px;
+    background-color: #6caad6;
+    color: white;
+    border: 0;
+    border-radius: 20px;
+    width: 130px;
+    margin: 0 auto;
 }

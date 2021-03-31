@@ -5,27 +5,38 @@ export function createMachineLi(machine) {
     const h3Name = document.createElement('h3');
     h3Name.textContent = machine.name;
 
-    const pManufacturer = document.createElement('p');
-    pManufacturer.textContent = machine.manufacturer;
+    const divManuYear = document.createElement('div');
+    divManuYear.classList.add('machine-manu-year');
 
-    const pYear = document.createElement('p');
-    pYear.textContent = machine.year;
+    const spanYear = document.createElement('span');
+    spanYear.textContent = machine.year;
+    spanYear.classList.add('machine-year');
 
-    const pImage = document.createElement('img');
-    pImage.src = machine.image;
+    const spanManufacturer = document.createElement('span');
+    spanManufacturer.textContent = machine.manufacturer;
+    spanManufacturer.classList.add('machine-manufacturer');
+
+    divManuYear.append(spanYear, spanManufacturer);
+
+    const divImage = document.createElement('div');
+    divImage.classList.add('machine-image');
+    divImage.style.backgroundImage = `url('${machine.image}')`;
 
     const pType = document.createElement('p');
     pType.textContent = machine.type;
 
     const pDescription = document.createElement('p');
+    pDescription.classList.add('machine-description');
     pDescription.textContent = machine.description;
 
     const pPrice = document.createElement('p');
     pPrice.textContent = `$${machine.price} per month`;
+    pPrice.classList.add('machine-price');
 
-    const buttonRentNow = document.createElement('button');
-    buttonRentNow.textContent = 'Rent now';
+    const buttonRent = document.createElement('button');
+    buttonRent.textContent = 'Rent';
+    buttonRent.value = machine.id;
 
-    li.append(h3Name, pManufacturer, pYear, pImage, pType, pDescription, pPrice, buttonRentNow);
+    li.append(h3Name, divManuYear, divImage, pType, pDescription, pPrice, buttonRent);
     return li;
 }
