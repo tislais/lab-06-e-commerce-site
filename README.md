@@ -7,3 +7,26 @@
 5) Is there some state we need to initialize?
 6) Find all the 'events' (user clicks, form submit, etc) in your app. Ask one by one, "What happens when" for each of these events.
 7) Think about how to validate each of your steps
+
+
+# Pinball Rental Shop Plan
+
+### Html Elements
+
+1. Container UL
+2. H3 for name
+3. img for image
+4. p for manufacturer
+5. p for year
+6. p for type
+7. p for description
+8. p for rental price
+9. rent now button
+    - _to select item_
+
+### Initialize State
+
+### Events
+1. rent now button
+    - _click_ ????
+
