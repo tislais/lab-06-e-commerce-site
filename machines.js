@@ -22,7 +22,7 @@ export const machines = [
     {
         id: 'ww1993',
         name: 'White Water ',
-        manufacturer: '	Williams Electronics',
+        manufacturer: 'Williams',
         year: '1993',
         image: '../assets/ww1993.jpg',
         type: 'Solid State Electronic',
