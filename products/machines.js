@@ -1,4 +1,4 @@
-import { machines } from '../machines-data.js';
+import { machines } from '../data/machines-data.js';
 import { createMachineLi } from '../utils.js';
 
 
