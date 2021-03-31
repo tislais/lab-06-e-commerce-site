@@ -1,7 +1,6 @@
 import { machines } from '../machines.js';
 import { createMachineLi } from '../utils.js';
 
-console.log(machines);
 
 const ul = document.getElementById('machines-ul');
 

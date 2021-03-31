@@ -119,4 +119,4 @@ export const machines = [
         description: `Flippers (2), Pop bumpers (2), Slingshots (2), 10-bank drop targets (1), Right playfield has two parallel lanes of serial rollovers.`,
         price: '150',
     }
-]
+];
