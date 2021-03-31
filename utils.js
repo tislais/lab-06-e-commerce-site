@@ -40,3 +40,13 @@ export function createMachineLi(machine) {
     li.append(h3Name, divManuYear, divImage, pType, pDescription, pPrice, buttonRent);
     return li;
 }
+
+export function findById(array, id) {
+    for (let item of array) {
+        if (item.id === id) return item;
+    }
+}
+
+export function calcItemTotal(quantity, price) {
+    return quantity * price;
+}
