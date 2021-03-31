@@ -48,5 +48,5 @@ test('It should take both a cart line item, and the corresponding product, and r
     
     const actual = createCartRow(cart[1], machines[9]);
 
-    expect.equal(actual, expected);
+    expect.equal(actual.outerHTML, expected);
 });

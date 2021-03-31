@@ -70,5 +70,5 @@ export function createCartRow(cartItem, machine) {
     tdPrice.textContent = calcItemTotal(cartItem.quantity, machine.price);
 
     tr.append(tdName, tdQuantity, tdPrice);
-    return tr.outerHTML;
+    return tr;
 }

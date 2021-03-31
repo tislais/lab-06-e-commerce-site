@@ -1,5 +1,5 @@
 import { machines } from '../data/machines-data.js';
-import { createMachineLi } from '../utils.js';
+import { createMachineLi, findById } from '../utils.js';
 
 
 const ul = document.getElementById('machines-ul');

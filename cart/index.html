@@ -17,7 +17,7 @@
     <main>
         <section class="main-section">
             <h2>Pinball Rental Shop Cart</h2>
-            <table>
+            <table id="cart-table">
                 <thead>
                     <tr>
                         <th class="th-name">Name</th>
@@ -25,22 +25,7 @@
                         <th class="th-price">Price</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td class="td-name">Twilight Zone</td>
-                        <td class="td-months">1 month</td>
-                        <td class="td-price">250</td>
-                    </tr>
-                    <tr>
-                        <td class="td-name">Big Game</td>
-                        <td class="td-months">3 months</td>
-                        <td class="td-price">200</td>
-                    </tr>
-                    <tr>
-                        <td class="td-name">Jurassic Park</td>
-                        <td class="td-months">5 months</td>
-                        <td class="td-price">350</td>
-                    </tr>
+                <tbody id="cart-table-body">
                 </tbody>
                 <tfoot>
                     <tr>
@@ -53,7 +38,7 @@
         </section>
     </main>
 
-    <script type="module" src="../app.js"></script>
+    <script type="module" src="./cart.js"></script>
 </body>
 
 </html>
