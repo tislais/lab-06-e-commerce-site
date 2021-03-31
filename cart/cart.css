@@ -1,0 +1,37 @@
+table {
+    width: 400px;
+    margin-top: 40px;
+    border: 1px solid #999;
+}
+
+thead {
+    border-bottom: 3px solid #999;
+    font-weight: bold;
+    text-align: left;
+}
+
+.th-months {
+    text-align: right;
+}
+
+.th-price {
+    width: 100px;
+    text-align: right;
+}
+
+td, th {
+    padding: 5px 10px;
+}
+
+.td-months {
+    text-align: right;
+}
+
+.td-price {
+    text-align: right;
+}
+
+.total-label-td,
+.total-price-td {
+    text-align: right;
+}
