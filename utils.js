@@ -68,7 +68,7 @@ export function createCartRow(cartItem, machine) {
 
     const tdPrice = document.createElement('td');
     tdPrice.classList.add('td-price');
-    tdPrice.textContent = calcItemTotal(cartItem.quantity, machine.price);
+    tdPrice.textContent = `$${calcItemTotal(cartItem.quantity, machine.price)}`;
 
     tr.append(tdName, tdQuantity, tdPrice);
     return tr;

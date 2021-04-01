@@ -15,7 +15,7 @@ const total = calcOrderTotal(cart, machines);
 
 const totalTd = document.createElement('td');
 totalTd.classList.add('total-price-td');
-totalTd.textContent = total;
+totalTd.textContent = `$${total}`;
 
 tableFootTr.append(totalTd);
 

@@ -2,8 +2,12 @@ body {
     background-color: #eee;
 }
 
+ul {
+    margin-top: 40px;
+}
+
 .machine {
-    width: 200px;
+    width: 222px;
     background-color: #fff;
     display: flex;
     flex-direction: column;
