@@ -44,7 +44,7 @@ test('It should take quantity and an amount and return the total', (expect) => {
 });
 
 test('It should take both a cart line item, and the corresponding product, and return dom that matches your static html example', (expect) => {
-    const expected = `<tr><td class="td-name">Big Game</td><td class="td-months">3 months</td><td class="td-price">600</td></tr>`;
+    const expected = `<tr><td class="td-name">Big Game</td><td class="td-months">3 months</td><td class="td-price">$600</td></tr>`;
     
     const actual = createCartRow(cart[1], machines[9]);
 
@@ -55,4 +55,4 @@ test('It should take the cart array and products array and return the calculated
     const expected = 2600;
     const actual = calcOrderTotal(cart, machines);
     expect.equal(actual, expected);
-})
+});

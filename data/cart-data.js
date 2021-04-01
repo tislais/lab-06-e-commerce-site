@@ -11,4 +11,4 @@ export const cart = [
         id: 'jp2019',
         quantity: 5,
     }
-]
+];
