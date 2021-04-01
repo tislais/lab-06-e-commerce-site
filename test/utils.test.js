@@ -1,7 +1,7 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
 
-import { createMachineLi, findById, calcItemTotal, createCartRow } from '../utils.js';
+import { createMachineLi, findById, calcItemTotal, createCartRow, calcOrderTotal } from '../utils.js';
 import { machines } from '../data/machines-data.js';
 import { cart } from '../data/cart-data.js';
 
@@ -50,3 +50,9 @@ test('It should take both a cart line item, and the corresponding product, and r
 
     expect.equal(actual.outerHTML, expected);
 });
+
+test('It should take the cart array and products array and return the calculated total of the cart data', (expect) => {
+    const expected = 2600;
+    const actual = calcOrderTotal(cart, machines);
+    expect.equal(actual, expected);
+})

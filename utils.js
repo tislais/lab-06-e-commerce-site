@@ -1,4 +1,5 @@
 import { cart } from "./data/cart-data.js";
+import { machines } from "./data/machines-data.js";
 
 export function createMachineLi(machine) {
     const li = document.createElement('li');
@@ -71,4 +72,15 @@ export function createCartRow(cartItem, machine) {
 
     tr.append(tdName, tdQuantity, tdPrice);
     return tr;
+}
+
+export function calcOrderTotal(cartArray, machinesArray) {
+    let sum = 0;
+
+    for (let cartItem of cartArray) {
+        const matchingMachinePrice = findById(machines, cartItem.id).price;
+        const matchingMachineTotal = calcItemTotal(cartItem.quantity, matchingMachinePrice);
+        sum += matchingMachineTotal;
+    }
+    return sum;
 }
