@@ -87,7 +87,7 @@ export const machines = [
         image: '../assets/sw1980.jpg',
         type: 'Solid State Electronic',
         description: `Flippers (4), Pop bumpers (3), Slingshots (2), Standup targets (4), 4-bank drop targets (2), 3-bank drop targets (1), Star Rollovers (2), Spinning target (1).`,
-        price: '250',
+        price: 250,
     },
     {
         id:  'bg1980',
@@ -97,7 +97,7 @@ export const machines = [
         image: '../assets/bg1980.jpg',
         type: 'Solid State Electronic',
         description: `Flippers (4), Pop bumpers (3), Slingshots (2), Star rollovers (5), 3-bank drop targets (3), Spinning targets (2), Standup targets (2), Kick-out hole (1).`,
-        price: '200',
+        price: 200,
     },
     {
         id:  'br1988',
@@ -107,7 +107,7 @@ export const machines = [
         image: '../assets/br1988.jpg',
         type: 'Solid State Electronic',
         description: `Flippers (3 horizontal, 3 vertical), Pop bumpers (3), Ramp (1), Kick-out hole (1), Spinning targets (2), Left outlane kickback, Captive balls (1 horizontal, 2 vertical), Up-post (between bottom flippers on the vertical playfield), Ball kicker next to the left slingshot, 2-ball Multiball.`,
-        price: '300',
+        price: 300,
     },
     {
         id:  'at1975',
@@ -117,6 +117,6 @@ export const machines = [
         image: '../assets/at1975.jpg',
         type: 'Electro-mechanical',
         description: `Flippers (2), Pop bumpers (2), Slingshots (2), 10-bank drop targets (1), Right playfield has two parallel lanes of serial rollovers.`,
-        price: '150',
+        price: 150,
     }
 ];

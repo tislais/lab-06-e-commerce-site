@@ -1,3 +1,6 @@
+
+import { machines } from './data/machines-data.js';
+
 export function createMachineLi(machine) {
     const li = document.createElement('li');
     li.classList.add('machine');
@@ -39,4 +42,45 @@ export function createMachineLi(machine) {
 
     li.append(h3Name, divManuYear, divImage, pType, pDescription, pPrice, buttonRent);
     return li;
+}
+
+export function findById(array, id) {
+    for (let item of array) {
+        if (item.id === id) return item;
+    }
+}
+
+export function calcItemTotal(quantity, price) {
+    const amount = quantity * price;
+    return Math.round(amount * 100) / 100;
+}
+
+export function createCartRow(cartItem, machine) {
+    const tr = document.createElement('tr');
+
+    const tdName = document.createElement('td');
+    tdName.classList.add('td-name');
+    tdName.textContent = machine.name;
+
+    const tdQuantity = document.createElement('td');
+    tdQuantity.classList.add('td-months');
+    tdQuantity.textContent = (cartItem.quantity > 1) ? `${cartItem.quantity} months` : `${cartItem.quantity} month`;
+
+    const tdPrice = document.createElement('td');
+    tdPrice.classList.add('td-price');
+    tdPrice.textContent = `$${calcItemTotal(cartItem.quantity, machine.price)}`;
+
+    tr.append(tdName, tdQuantity, tdPrice);
+    return tr;
+}
+
+export function calcOrderTotal(cartArray) {
+    let sum = 0;
+
+    for (let cartItem of cartArray) {
+        const matchingMachinePrice = findById(machines, cartItem.id).price;
+        const matchingMachineTotal = calcItemTotal(cartItem.quantity, matchingMachinePrice);
+        sum += matchingMachineTotal;
+    }
+    return sum;
 }

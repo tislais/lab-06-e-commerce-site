@@ -1,0 +1,53 @@
+table {
+    width: 400px;
+    margin: 40px;
+    border-collapse: collapse;
+}
+
+thead {
+    border-bottom: 3px solid #ccc;
+    font-weight: bold;
+    text-align: left;
+}
+
+tfoot {
+    border-top: 3px solid #ccc;
+}
+
+.th-months {
+    text-align: right;
+}
+
+.th-price {
+    width: 60px;
+    text-align: right;
+}
+
+td, th {
+    padding: 5px 10px;
+}
+
+.td-months {
+    text-align: right;
+}
+
+.td-price {
+    text-align: right;
+}
+
+.total-label-td,
+.total-price-td {
+    text-align: right;
+    font-weight: bold;
+}
+
+
+button {
+    padding: 10px 30px;
+    background-color: #6caad6;
+    color: white;
+    border: 0;
+    border-radius: 20px;
+    margin: 0 auto;
+    font-size: 1rem;
+}
