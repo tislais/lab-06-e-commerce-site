@@ -32,7 +32,7 @@ export const machines = [
     {
         id: 'sl1965',
         name: 'Sky Line',
-        manufacturer: 'Gottleib',
+        manufacturer: 'Gottlieb',
         year: '1965',
         image: '../assets/sl1965.jpg',
         type: 'Electro-mechanical',
@@ -72,7 +72,7 @@ export const machines = [
     {
         id: 'bh1981',
         name: 'Black Hole',
-        manufacturer: 'Gottleib',
+        manufacturer: 'Gottlieb',
         year: '1981',
         image: '../assets/bh1981.jpg',
         type: 'Solid State Electronic',
@@ -112,7 +112,7 @@ export const machines = [
     {
         id:  'at1975',
         name: 'Atlantis',
-        manufacturer: 'Gottleib',   
+        manufacturer: 'Gottlieb',   
         year: '1975',
         image: '../assets/at1975.jpg',
         type: 'Electro-mechanical',
