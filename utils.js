@@ -37,20 +37,30 @@ export function createMachineLi(machine) {
     pDescription.textContent = machine.description;
 
     const pPrice = document.createElement('p');
-    pPrice.textContent = `$${machine.price} per month`;
+    pPrice.textContent = `$${machine.price} / month`;
     pPrice.classList.add('machine-price');
+
+    const inputAmount = document.createElement('input');
+    inputAmount.id = `input-${machine.id}`;
+    inputAmount.type = 'number';
+    inputAmount.min = '0';
+    inputAmount.max = '6';
+    inputAmount.value = 1;
+    inputAmount.classList.add('machine-amount');
 
     const buttonRent = document.createElement('button');
     buttonRent.textContent = 'Rent';
     buttonRent.value = machine.id;
+    buttonRent.id = `button-${machine.id}`;
 
     buttonRent.addEventListener('click', () => {
+        const machineQuantity = document.getElementById('input-' + machine.id).valueAsNumber;
         addItemToCart(machine.id);
-        cartCount++;
+        cartCount += machineQuantity;
         cartCountDiv.textContent = `Items in cart: ${cartCount}`;
     });
 
-    li.append(h3Name, divManuYear, divImage, pType, pDescription, pPrice, buttonRent);
+    li.append(h3Name, divManuYear, divImage, pType, pDescription, pPrice, inputAmount, buttonRent);
     return li;
 }
 
