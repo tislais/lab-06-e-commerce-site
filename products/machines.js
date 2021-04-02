@@ -8,3 +8,4 @@ for (let machine of machines) {
     const li = createMachineLi(machine);
     ul.append(li);
 }
+

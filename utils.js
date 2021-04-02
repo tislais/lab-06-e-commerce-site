@@ -1,5 +1,9 @@
 
 import { machines } from './data/machines-data.js';
+import { addItemToCart } from './local-storage-utils.js';
+
+let cartCount = 0;
+const cartCountDiv = document.getElementById('cart-count-div');
 
 export function createMachineLi(machine) {
     const li = document.createElement('li');
@@ -39,6 +43,12 @@ export function createMachineLi(machine) {
     const buttonRent = document.createElement('button');
     buttonRent.textContent = 'Rent';
     buttonRent.value = machine.id;
+
+    buttonRent.addEventListener('click', () => {
+        addItemToCart(machine.id);
+        cartCount++;
+        cartCountDiv.textContent = `Items in cart: ${cartCount}`;
+    });
 
     li.append(h3Name, divManuYear, divImage, pType, pDescription, pPrice, buttonRent);
     return li;
