@@ -20,10 +20,17 @@ export function addItemToCart(productId, newQuantity) {
 
     if (matchingMachine){
         matchingMachine.quantity = newQuantity;
-    } else {
+    } else if (newQuantity) {
         const machine = {
             id: productId,
             quantity: newQuantity
+        };
+
+        cart.push(machine);
+    } else {
+        const machine = {
+            id: productId,
+            quantity: 1
         };
 
         cart.push(machine);
