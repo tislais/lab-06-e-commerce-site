@@ -48,15 +48,16 @@ export function createMachineLi(machine) {
     inputAmount.value = 1;
     inputAmount.classList.add('machine-amount');
 
+
     const buttonRent = document.createElement('button');
     buttonRent.textContent = 'Rent';
     buttonRent.value = machine.id;
     buttonRent.id = `button-${machine.id}`;
 
     buttonRent.addEventListener('click', () => {
-        const machineQuantity = document.getElementById('input-' + machine.id).valueAsNumber;
-        addItemToCart(machine.id);
+        let machineQuantity = document.getElementById('input-' + machine.id).valueAsNumber;
         cartCount += machineQuantity;
+        addItemToCart(machine.id, inputAmount.valueAsNumber);
         cartCountDiv.textContent = `Items in cart: ${cartCount}`;
     });
 

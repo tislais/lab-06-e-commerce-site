@@ -14,16 +14,16 @@ export function setCart(parsedCart) {
     localStorage.setItem(CART, stringyCart);
 }
 
-export function addItemToCart(productId) {
+export function addItemToCart(productId, newQuantity) {
     const cart = getCart();
     const matchingMachine = findById(cart, productId);
 
     if (matchingMachine){
-        matchingMachine.quantity++;
+        matchingMachine.quantity = newQuantity;
     } else {
         const machine = {
             id: productId,
-            quantity: 1
+            quantity: newQuantity
         };
 
         cart.push(machine);
